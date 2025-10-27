@@ -15,22 +15,23 @@ from datetime import datetime, timedelta
 import requests
 import boto3
 
+
 #define dag
 @dag(
     dag_id="practice",
-    start_date=datetime(2025, 10, 25, tz="UTC"),
+    start_date=datetime(2025, 10, 25),
     schedule=None,
     catchup=False,
     tags=["test"],
 )
 
-def sandbox(weather):
+def sandbox(name1):
     """
     This dag will retreive messages, read them, delete them, then assemble a message
     """
     #Task/function to get attributes
     @task(retries=3, retry_delay=timedelta(seconds=10))
-    def namer(name):
+    def namer(name: str):
         #graceful error handling
         try:
             print(f"My name is {name}")
@@ -38,8 +39,7 @@ def sandbox(weather):
             #print error message
             print(f"Error getting queue attributes: {e}")
             raise e
+    namer(name1)
 
-#Execution
-if __name__ == "__main__":
-    #Run the dag with the desired url to collect messages and url to send to
-    sandbox("Ryan")
+
+practice_dag = sandbox("Ryan")

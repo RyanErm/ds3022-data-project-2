@@ -1,11 +1,17 @@
 #Ryan Ermovick - jph4dg
 
+#To do:
+# Ask about git igonore, do a final check for queue attributes. 
+
+
+
+
 #Ask about the innovative design bonus??? Is what I have acceptable, I dont have some way to check for available messages
-#I get a message when present, but I don't decript anything to show how many messages left or whatever
-#Ask if my logging is acceptable
-#Confirm that my messages get deleted
-#Ask what I should include in the "message" body of the final message that i send
-#Ask how to gitignore the pycache
+#I get a message when present, but I don't decript anything to show how many messages left or whatever - good 
+#Ask if my logging is acceptable - logging works
+#Confirm that my messages get deleted - done
+#Ask what I should include in the "message" body of the final message that i send - pretty sure is good
+#Ask how to gitignore the pycache - lowk just ask neil
 
 
 #import the proper libraries

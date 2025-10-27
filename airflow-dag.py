@@ -189,6 +189,6 @@ def message_assembler_dag(q_url: str, num_messages: int, sender_url: str):
     print("Flow is working - Final phrase and message sent!")
 
 #Execution
-if __name__ == "__main__":
+
     #Run the dag with the desired url to collect messages and url to send to
-    message_assembler_dag(queue_url, 21, "https://sqs.us-east-1.amazonaws.com/440848399208/dp2-submit")
+project_dag = message_assembler_dag(queue_url, 21, "https://sqs.us-east-1.amazonaws.com/440848399208/dp2-submit")
