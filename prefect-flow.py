@@ -1,6 +1,7 @@
 #Ryan Ermovick - jph4dg
 
-#Ask about the innovative design bonus??? Is what I have acceptable, I dont have some way to check for avialable messages
+#Ask about the innovative design bonus??? Is what I have acceptable, I dont have some way to check for available messages
+#I get a message when present, but I don't decript anything to show how many messages left or whatever
 #Ask if my logging is acceptable
 #Confirm that my messages get deleted
 #Ask what I should include in the "message" body of the final message that i send
