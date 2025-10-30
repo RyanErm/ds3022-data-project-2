@@ -1,17 +1,8 @@
 #Ryan Ermovick - jph4dg
 
 #To do:
-# Ask about git igonore, do a final check for queue attributes. 
-
-
-
-
-#Ask about the innovative design bonus??? Is what I have acceptable, I dont have some way to check for available messages
-#I get a message when present, but I don't decript anything to show how many messages left or whatever - good 
-#Ask if my logging is acceptable - logging works
-#Confirm that my messages get deleted - done
-#Ask what I should include in the "message" body of the final message that i send - pretty sure is good
-#Ask how to gitignore the pycache - lowk just ask neil
+#Ask how to gitignore the pycache - lowk just ask neil, you did, if it doesnt work... then just delete once pushed
+#lowkey, make all the final stuff just another task
 
 
 #import the proper libraries
@@ -179,6 +170,9 @@ def my_flow(q_url, len_message, sender_url):
     #Send solution
     send_solution(sender_url,"Message", "jph4dg", phrase, "prefect")
     print("Flow is working - Final phrase and message sent!")
+    #do a final check for messages left
+    print("Review for any outstanding messages. There should be no messages left!")
+    get_queue_attributes(q_url)
     #nothing to return here
     return None
 
