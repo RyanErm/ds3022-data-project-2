@@ -33,7 +33,7 @@ def get_queue_attributes(queue_url):
 #Task/function to obtain a message
 #45 retries for the SQS function that searches for 20 seconds each time
 #45*20=900 seconds, which is the longest that a message could be delayed for
-@task(retries = 45, retry_delay_seconds=10)
+@task(retries = 45, retry_delay_seconds=2)
 def get_message(queue_url):
     # graceful error handling
     try:
@@ -170,9 +170,6 @@ def my_flow(q_url, len_message, sender_url):
     #Send solution
     send_solution(sender_url,"Message", "jph4dg", phrase, "prefect")
     print("Flow is working - Final phrase and message sent!")
-    #do a final check for messages left
-    print("Review for any outstanding messages. There should be no messages left!")
-    get_queue_attributes(q_url)
     #nothing to return here
     return None
 
